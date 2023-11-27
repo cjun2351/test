@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+body {
+  min-height: 100%;
+  background-color: #0b1a2f;
+  color: #fff;
+  font-family: "Noto Sans TC", sans-serif;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+#page-title .container .title h1 {
+  text-align: center;
+  font-size: 3em;
+  letter-spacing: 0.1em;
+}
+#page-title .container .title {
+  max-width: 80%;
+  margin: auto;
+  border-bottom: 3px solid #fff;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 0;
+}
+
+.banner .pic img {
+  width: 100%;
+}
