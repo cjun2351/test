@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input class="quantity-300" type="number" name="" id="" value="0" />
+    <button class="add-300">add-300</button>
+    <button class="minus-300">minus-300</button>
+    <input class="quantity-150" type="number" name="" id="" value="0" />
+    <button class="add-150">add-150</button>
+    <button class="minus-150">minus-150</button>
+    <div class="output"></div>
+  </body>
+  <script>
+    let price = { 300: 300, 150: 150 };
+    let addBtn300 = document.querySelector(".add-300");
+    let minusBtn300 = document.querySelector(".minus-300");
+    let addBtn150 = document.querySelector(".add-150");
+    let minusBtn150 = document.querySelector(".minus-150");
+    function quantityAndPriceCaculate(quantity, priceKey, caculateMode) {
+      currentValue = parseInt(quantity.value);
+      if (
+        (caculateMode == "add" && currentValue >= 0) ||
+        (caculateMode == "minus" && currentValue > 0)
+      ) {
+        if (caculateMode == "add") {
+          quantity.value = currentValue + 1;
+        } else {
+          quantity.value = currentValue - 1;
+        }
+      }
+      priceCaculate();
+    }
+    function priceCaculate() {
+      let total = 0;
+      for (key in price) {
+        total += document.querySelector(`.quantity-${key}`).value * price[key];
+      }
+      document.querySelector(".output").innerHTML = total;
+    }
+    addBtn300.addEventListener(
+      "click",
+      function () {
+        quantityAndPriceCaculate(
+          document.querySelector(".quantity-300"),
+          300,
+          "add"
+        );
+      },
+      false
+    );
+    minusBtn300.addEventListener(
+      "click",
+      function () {
+        quantityAndPriceCaculate(
+          document.querySelector(".quantity-300"),
+          300,
+          "minus"
+        );
+      },
+      false
+    );
+    addBtn150.addEventListener(
+      "click",
+      function () {
+        quantityAndPriceCaculate(
+          document.querySelector(".quantity-150"),
+          150,
+          "add"
+        );
+      },
+      false
+    );
+    minusBtn150.addEventListener(
+      "click",
+      function () {
+        quantityAndPriceCaculate(
+          document.querySelector(".quantity-150"),
+          150,
+          "minus"
+        );
+      },
+      false
+    );
+  </script>
+</html>

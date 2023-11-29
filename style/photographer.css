@@ -1,0 +1,68 @@
+/* outstanding */
+#outstanding {
+  width: 100%;
+}
+.outstanding-title h2 {
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+}
+.photographer-list {
+  display: flex;
+  margin: 50px 0;
+}
+.photographer-3-list {
+  justify-content: space-between;
+}
+.photographer-2-list {
+  justify-content: space-evenly;
+}
+.photographer-card .pic {
+  background-color: #fff;
+}
+.photographer-card .pic img {
+  vertical-align: middle;
+  width: 100%;
+  padding: 15px 15px 30px 15px;
+}
+.photographer-card a {
+  text-decoration: none;
+}
+.name-content {
+  color: #fff;
+}
+.name-content h3 {
+  font-size: 1.75rem;
+  padding: 10px 0;
+  margin: 0;
+  letter-spacing: 0.1rem;
+}
+.name-content p {
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 10px 0;
+  letter-spacing: 0.1rem;
+}
+/* newbie */
+#newbie {
+  width: 100%;
+}
+.newbie-title h2 {
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+}
+
+@media (max-width: 768px) {
+  .photographer-3-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+  .photographer-2-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .banner {
+      width: 100%;
+      height: 100vh;
+      background-image: url(img/Banner_img_1.png);
+      transition: background-image 0.5s ease-in-out;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .linar-gradiant {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: linear-gradient(to top, #0b1a2f, #0b1a2f00 20%);
+    }
+  </style>
+  <body>
+    <div class="banner"></div>
+    <div class="linar-gradiant"></div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script>
+    var images = [
+      "Banner_img_1.png",
+      "Banner_img_2.png",
+      "Banner_img_3.png",
+      "Banner_img_4.png",
+      "Banner_img_5.png",
+    ];
+    $(function () {
+      var i = 0;
+      function changeBackground() {
+        $(".banner").css("background-image", "url(img/" + images[i] + ")");
+        i = (i + 1) % images.length;
+      }
+      changeBackground(); // 初始化
+      setInterval(changeBackground, 5000); // 5秒切换一次
+    });
+  </script>
+</html>

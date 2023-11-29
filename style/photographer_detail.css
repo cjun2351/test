@@ -1,0 +1,84 @@
+/* photographer-info */
+#photographer-info {
+  width: 100%;
+}
+.phtographer-info-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photographer-img {
+  padding: 0 30px;
+}
+.photographer-img .pic {
+  width: 400px;
+  background-color: #fff;
+}
+.photographer-img .pic img {
+  width: 100%;
+  vertical-align: middle;
+  padding: 15px 15px 30px 15px;
+}
+.photographer-info-detail {
+  max-width: 50%;
+  padding: 30px;
+}
+.photographer-info-detail .photographer-name {
+  margin: 20px 0;
+}
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+}
+h3 {
+  font-size: 1.75rem;
+  letter-spacing: 0.1rem;
+}
+p {
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  letter-spacing: 0.1rem;
+}
+.exp-title {
+  margin: 20px 0;
+}
+.exp-para {
+  margin: 20px 0;
+}
+.breif-intro-title {
+  margin: 20px 0;
+}
+
+.brief-intro-para {
+  margin: 20px 0;
+}
+/* achievement */
+#achievement {
+  width: 100%;
+}
+.achievement-list {
+  display: grid;
+  justify-content: center;
+}
+/* portifolio */
+#portifolio {
+  width: 100%;
+}
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+.portifolio-list {
+  display: flex;
+  justify-content: space-between;
+}
+.portifolio-card .pic {
+  background-color: #fff;
+  width: 350px;
+}
+.portifolio-card .pic img {
+  width: 100%;
+  vertical-align: middle;
+  padding: 15px 15px 30px 15px;
+}
